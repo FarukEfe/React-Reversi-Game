@@ -1,0 +1,77 @@
+@import url("./images/font/fonts.css");
+*{
+    font-family: "Pangolin";
+}
+body{
+    background: #222;
+}
+button{
+    color: #000;
+}
+#page-container{
+    display: grid;
+    place-items: center;
+}
+
+#main-title{
+    font-size: 80px;
+}
+
+.neon{
+    color: #fff;
+    text-shadow: 0 0 25px #fff;
+    text-align: center;
+}
+
+button:active{
+    color: initial;
+}
+
+#button-container{
+    display: grid;
+    place-items: center;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+#button-container button{
+    background: #fff;
+    box-shadow: 0 0 40px #fff,0 0 40px #fff;
+    border: none;
+    width: 200px;
+    height: 60px;
+    border-radius: 5em;
+    font-size: 2em;
+    margin: 30px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+#button-container button:hover{
+    background: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+#player-selection{
+    position: relative;
+    top: 40vh;
+    display: grid;
+    place-items: center;
+}
+
+#player-selection h1{
+    margin: 0 0 3rem 0;
+    font-size: 40px;
+}
+
+#player-selection span{
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#player-selection span:nth-child(1){
+    color: #000;
+    text-shadow: 0 0 25px #fff,0 0 25px #fff,0 0 25px #fff,0 0 25px #fff;
+    transition: .3s ease-in-out;
+}

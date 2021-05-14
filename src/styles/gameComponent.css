@@ -1,0 +1,241 @@
+@import url("../images/font/fonts.css");
+*{
+    font-family: "Pangolin";
+    color: #fff;
+}
+
+#topRight-bar{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+#topRight-bar *{
+    border: solid 5px;
+    border-radius: 50%;
+    background: none;
+    box-shadow: 0 0 25px #fff;
+    margin: 0 10px;
+    font-size: 50px;
+    font-family: "Pangolin";
+    color: #fff;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#topRight-bar *:hover{
+    background: #fff;
+    color: #000;
+}
+
+#reducing-size{
+    margin-left: 2rem;
+}
+
+#gameboard-container{
+    display: grid;
+    place-items: center;
+    top: 3rem;
+    float: left;
+    width: 575px;
+    height: 575px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#board-container{
+    background: rgb(35, 140, 40);
+    border: solid rgb(20, 100, 20) 10px;
+    border-radius: 0.5rem;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    
+}
+
+#boundary-setter{
+    margin: 0.025rem 0;
+    margin-top: 0.3rem;
+}
+
+.board-row{
+    margin: -5px 0;
+}
+
+.squares{
+    display: inline-flex;
+    border: solid #000;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.350);
+    padding: 0.2rem;
+    width: 67px;
+    height: 67px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.squares img{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+}
+
+.turn-win{
+    background: rgba(255, 255, 255, 0.7);
+    margin-top: 1.5rem;
+    font-size: 30px;
+    color: green;
+}
+
+.turn-win.animating{
+    color: red;
+    animation: waiting 1.5s ease-in-out;
+}
+
+@keyframes waiting {
+    0%{
+        background: rgba(255, 255, 255, 0.7);
+    }
+    50%{
+        background: #222;
+    }
+    100%{
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+#side-menu{
+    position: relative;
+    top: 5rem;
+    float: right;
+    display: grid;
+    place-items: center;
+}
+
+#moves-container{
+    width: 150px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+}
+
+#move-menu{
+    width: min-content;
+    height: min-content;
+    background: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+#stones-counter{
+    list-style-type: none;
+    display: grid;
+    place-items: center;
+    margin-right: 2rem;
+}
+
+#stones-counter li{
+    margin: 25px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+#stones-counter img{
+    margin: 15px;
+}
+
+#gameOver{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    opacity: 0;
+    transition: 1.5s ease-in-out;
+}
+
+#gameOver div div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#gameOver div *{
+    text-align: center;
+}
+
+#gameOver div div .flex-item{
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+}
+
+#gameOver button{
+    background: #fff;
+    box-shadow: 0 0 40px #fff,0 0 40px #fff;
+    border: none;
+    width: 200px;
+    height: 60px;
+    border-radius: 5em;
+    font-size: 2em;
+    margin: 30px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#gameOver button:hover{
+    background: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+#gameOver.open{
+    top: 0;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    #topRight-bar{
+        top: 5px;
+        left: 5px;
+    }
+    #topRight-bar *{
+        font-size: 30px;
+        width: min-content;
+        height: min-content;
+        box-shadow: none;
+        width: 40px;
+        height: 40px;
+        border-width: 2px;
+    }
+    #reducing-size{
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #side-menu{
+        display: none;
+    }
+    #reducing-size{
+        margin: 0;
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        display: grid;
+        place-items: center;
+    }
+}
+

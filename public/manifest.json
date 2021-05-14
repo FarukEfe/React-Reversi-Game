@@ -1,0 +1,26 @@
+{
+  "short_name": "Reversi",
+  "name": "Browser Reversi Game",
+  "icons": [
+    {
+      "src": "stone_black.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "stone_white.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "console.svg",
+      "sizes": "65x65",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+
