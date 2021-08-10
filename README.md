@@ -1,4 +1,4 @@
-*Before*
+### Before
 
 First type to shell (of course in your preferred directory) `npx create-react-app yourAppName`. Then replace the src folder with the one here, and the reversi game is ready!
 
